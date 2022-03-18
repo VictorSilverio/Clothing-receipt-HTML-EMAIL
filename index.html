@@ -1,0 +1,833 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="color-scheme" content="light dark">
+   <meta name="supported-color-schemes" content="light dark">
+	<title>HTML Email Template Boilerplate</title>
+   <style type="text/css">
+   	@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+      table {
+			border-spacing: 0;
+		}
+      td {
+         padding: 0;
+      }
+      p {
+         font-size: 15px;
+         color: #000000;
+      }
+      img {
+         border: 0;
+      }
+      a {
+         text-decoration: none;
+         color: #e8fbfa;
+         font-size: 16px;
+      }
+      .content {
+         line-height: 20px;
+         font-size: 15px;
+      }
+
+   
+
+
+      @media screen and (max-width: 599.98px) {
+         .two-columns .padding {
+            padding-right: 0!important;
+            padding-left: 0!important;
+         }
+
+         .confirmation {
+            text-align: center !important;
+         }
+
+
+         .column { 
+            display: block !important;
+            text-align: center !important;
+            width: 100% !important;
+            
+         }
+         
+       
+         .price, .quantity{
+            padding: 0px !important;
+            margin: 0px !important;
+         }
+
+         .item-description {
+            padding: 0px 77px !important;
+
+         }
+
+         .subtotal{
+            display: block !important;
+         }
+         
+         .subtotal table, .ship-row table, .total-row table, .payment-row table {
+            width: 50% !important;
+         }
+
+        
+
+         .subtotal p, .ship-row p, .total-row p, .payment-row p{
+            text-align: center !important;
+         }
+
+
+         .shipping-info table {
+            display: block !important;
+            width: 50% !important;
+         }
+         
+         .shipping-info p {/* background: pink !important; */
+            text-align: center !important;
+         }
+
+         img.two-col-img {
+            width: 300px!important;
+            max-width: 300px!important;
+         }
+
+      }
+      @media screen and (max-width: 399.98px) {
+         img.three-col-img {
+            width: 200px!important;
+            max-width: 200px!important;
+         }
+         
+      }
+
+      /* Custom Dark Mode Colors */
+      :root {
+         color-scheme: light dark;
+         supported-color-schemes: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+         /*
+         body, center, .darkmode-bg {
+            background: #2d2d2d!important;
+            color: #ffffff!important;
+         }
+
+         table, td {
+            background: #323232 !important;
+         }
+         p, h1, h2{
+            color: #ffffff!important;
+         }
+         .header-row{
+            background-color: #F15D2A !important;
+         }
+
+         .footer-row, .footer-row td, .confirmation {
+            background-color: #000000 !important;
+         }
+
+         .darkmode-transparent {
+            background-color: transparent!important;
+         }
+         */
+      }
+   </style>
+   
+	<!--[if (gte mso 9)|(IE)]>
+		<style type="text/css">
+			table {border-collapse: collapse !important;}
+		</style>
+	<![endif]-->
+	
+</head>
+<body style="Margin:0;padding:0;min-width:100%;background-color:#dde0e1;">
+
+   <!--[if (gte mso 9)|(IE)]>
+      <style type="text/css">
+         body {background-color: #dde0e1!important;}
+         body, table, td, p, a {font-family: sans-serif, Arial, Helvetica!important;}
+      </style>
+   <![endif]-->
+
+   <center style="width: 100%;table-layout:fixed;background-color: #dde0e1;padding-bottom: 40px;">
+      <div style="max-width: 600px;background-color: #fafdfe;box-shadow: 0 0 10px rgba(0, 0, 0, .2);">
+
+         <!-- Preheader (remove comment) -->
+         <div style="font-size: 0px;color: #fafdfe;line-height: 1px;mso-line-height-rule:exactly;display: none;max-width: 0px;max-height: 0px;opacity: 0;overflow: hidden;mso-hide:all;">
+            <!-- Add Preheader Text Here (85-100 characters in length) -->
+         </div>
+         <!-- End Preheader (remove comment) -->
+      
+         <!--[if (gte mso 9)|(IE)]>
+            <table width="600" align="center" style="border-spacing:0;color:#565656;" role="presentation">
+            <tr>
+            <td style="padding:0;">
+         <![endif]-->
+
+         <table align="center" style="border-spacing:0;color:#565656;font-family: 'Lato',sans-serif, Arial, Helvetica;background-color: #fafdfe;Margin:0;padding:0;width: 100%;max-width: 600px;" role="presentation">
+
+
+<!-- START HEADER TABLE ROW -->
+            <tr>
+               <td style="padding:0;">
+                  <table width="100%" style="border-spacing:0;" role="presentation">
+                     <tr>
+                        <td class="header-row" style="padding: 23px 0px; background-color: #F15D2A;" align="center">
+                           <img src="https://i.postimg.cc/FHqdRJ4B/logo-header.png" alt="logo">
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+<!-- END HEADER TABLE ROW -->
+
+<!-- START OF ORDER INTRO -->
+            <tr>
+               <td style="padding:0;">
+                  <table width="100%" style="border-spacing:0;" role="presentation">
+                     <tr>
+                        <td class="order-intro" style="padding: 20px 0px; background-color: #FFFFFF;">
+                           <h1 class="title" style="text-align: center; color: #000000; font-size: 23px; font-weight: 400;">ORDER CONFIRMATION</h1>
+                        </td>
+                     </tr>
+                  </table>
+
+                  <!-- border -->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                     <tr>
+                        <td height="1.5" style="background-color: #EEEEEE;"></td>
+                     </tr>
+                  </table>
+
+                  <!-- CONFIRMATION Number -->
+                  <table width="100%" style="border-spacing:0;" role="presentation">
+                     <tr>
+                        <td class="confirmation" style="padding: 30px 40px 0px 40px; background-color: #FFFFFF; text-align: left;">
+                           <h2 style="margin:0; color: #000000; font-size: 15px; font-weight: 700;">ORDER #65005</h2>
+                           <p style="margin:0; padding-top: 5px; font-size: 12px; color:#F15D2A;">March 17, 2022</p>
+                           <p class="username">Hi Victor Silverio,</p>
+                           <p>Thank you for your purchase, this email confirms your order. We will send you another email as soon as it ships.</p>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+<!-- END OF ORDER INTRO -->
+
+<!-- START ITEMS ORDERED -->
+            <tr>
+               <td style="padding: 10px 40px 0px 40px; background-color: #FFFFFF;">
+                  <table width="100%" style="border-spacing:0;" role="presentation">
+                     <tr>
+                        <td style="padding: 10px 0px 0px 0px; background-color: #FFFFFF; text-align: left;">
+                           <h2 style="margin:0; color: #000000; font-size: 13px; font-weight: 400;">ITEMS ORDERED</h2>
+                        </td>
+                     </tr>
+                  </table>
+
+                  <!-- border -->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                     <tr>
+                        <td height="1.5" style="background-color: #EEEEEE;"></td>
+                     </tr>
+                  </table>
+
+                  <!-- item -->
+                  <table width="100%" style="border-spacing:0;" role="presentation">
+                     <tr>
+                        <td class="padding" style="padding: 30px 13px; background-color: #FFFFFF;">
+
+                            <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="100" valign="top" style="padding: 0;">
+                           <![endif]-->                           
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 100px; display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td class="item-container">
+                                    <img src="https://i.postimg.cc/VLfbH8gD/item1.png" alt="hat">
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                               </tr>
+                              </table>
+                           <![endif]-->  
+
+ 
+                           <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="250" valign="top" style="padding: 0;">
+                           <![endif]-->                             
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 250px; display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td class="item-description" style="padding: 20px 20px;">
+                                    <p style="margin:0; padding: 1px 0px; font-weight: 700">Layover Travel Cap M</p>
+                                    <p style="margin:0; padding: 1px 0px; font-size: 12px; color: #F15D2A;">Dark Blue / M</p>
+                                    <p style="margin:0; padding: 1px 0px;  color: #F15D2A;font-weight: 900; font-size: 16px;">Expected Ship Date: 3/21/22</p>
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                               </tr>
+                              </table>
+                           <![endif]-->
+
+
+                            <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="85" valign="top" style="padding: 0;">
+                           <![endif]-->                           
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 85px; text-align: center;display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td style="text-align: center; padding: 20px 20px;">
+                                    <p class="quantity" style="margin:0; text-align: center;">x 1</p>
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                               </tr>
+                              </table>
+                           <![endif]-->  
+
+                           <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="45" valign="top" style="padding: 0;">
+                           <![endif]-->                            
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 45px; display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td style="text-align: center;">
+                                    <p class="price" style="margin:0; text-align: center; padding: 20px 20px;">$25.00</p>
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                               </tr>
+                              </table>
+                           <![endif]--> 
+
+                        </td>
+                     </tr>
+                  </table>
+
+
+                  <!-- border -->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                     <tr>
+                        <td height="1.5" style="background-color: #EEEEEE;"></td>
+                     </tr>
+                  </table>
+
+                  
+
+                  
+                  <!-- item -->
+                  <table width="100%" style="border-spacing:0;" role="presentation">
+                     <tr>
+                        <td class="padding" style="padding: 30px 13px; background-color: #FFFFFF;">
+                           <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="100" valign="top" style="padding: 0;">
+                           <![endif]-->                           
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 100px; display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td class="item-container">
+                                    <img src="https://i.postimg.cc/Kz7RJqg6/item3.png" alt="sweater">
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                              </tr>
+                              </table>
+                           <![endif]-->
+                           
+                           
+                           <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="250" valign="top" style="padding: 0;">
+                           <![endif]-->                             
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 250px; display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td class="item-description" style="padding: 20px 20px;">
+                                    <p style="margin:0; padding: 1px 0px; font-weight: 700">Layover Travel Sweater</p>
+                                    <p style="margin:0; padding: 1px 0px; font-size: 12px; color: #F15D2A;">Khaki / M</p>
+                                    
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                              </tr>
+                              </table>
+                           <![endif]-->  
+
+                            <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="85" valign="top" style="padding: 0;">
+                           <![endif]-->                            
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 85px; text-align: center;display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td style="text-align: center; padding: 20px 20px;">
+                                    <p class="quantity" style="margin:0; text-align: center;">x 1</p>
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                               </tr>
+                              </table>
+                           <![endif]-->
+                           
+                           
+                            <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="45" valign="top" style="padding: 0;">
+                           <![endif]-->                          
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 45px; display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td style="text-align: center;">
+                                    <p class="price" style="margin:0; text-align: center; padding: 20px 20px;">$25.00</p>
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                               </tr>
+                              </table>
+                           <![endif]-->  
+                        </td>
+                     </tr>
+                  </table>
+
+                   <!-- border -->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                     <tr>
+                        <td height="1.5" style="background-color: #EEEEEE;"></td>
+                     </tr>
+                  </table>
+
+
+                  <!-- item -->
+                  <table width="100%" style="border-spacing:0;" role="presentation">
+                     <tr>
+                        <td class="padding" style="padding: 30px 13px; background-color: #FFFFFF;">
+                           <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="100" valign="top" style="padding: 0;">
+                           <![endif]-->                           
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 100px; display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td class="item-container">
+                                    <img src="https://i.postimg.cc/63x8VJTV/item2.png" alt="pants">
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                               </tr>
+                              </table>
+                           <![endif]-->                             
+
+                           <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="100" valign="top" style="padding: 0;">
+                           <![endif]-->
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 250px; display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td class="item-description" style="padding: 20px 20px;">
+                                    <p style="margin:0; padding: 1px 0px; font-weight: 700">Layover Travel Pants</p>
+                                    <p style="margin:0; padding: 1px 0px; font-size: 12px; color: #F15D2A;">Dark / 33</p>
+                                    
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                               </tr>
+                              </table>
+                           <![endif]-->  
+
+                           <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="85" valign="top" style="padding: 0;">
+                           <![endif]-->                            
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 85px; display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td style="text-align: center; padding: 20px 20px;" >
+                                    <p style="margin:0;">x 1</p>
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                               </tr>
+                              </table>
+                           <![endif]-->  
+
+
+                           <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="45" valign="top" style="padding: 0;">
+                           <![endif]--> 
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 45px; display:inline-block;" role="presentation" align="center"> 
+                              <tr>
+                                 <td style="text-align: center; padding: 20px 20px;"  class="price" >
+                                    <p style="margin:0;">$30.00</p>
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                               </tr>
+                              </table>
+                           <![endif]-->  
+
+                        </td>
+                     </tr>
+                  </table>
+
+                   <!-- border -->
+                   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                     <tr>
+                        <td height="1.5" style="background-color: #EEEEEE;"></td>
+                     </tr>
+                  </table>
+
+
+                  <!-- item -->
+                  <table width="100%" style="border-spacing:0;" role="presentation">
+                     <tr>
+                        <td class="padding" style="padding: 30px 13px; background-color: #FFFFFF;">
+
+
+                            <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="100" valign="top" style="padding: 0;">
+                           <![endif]-->                           
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 100px; display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td class="item-container">
+                                    <img src="https://i.postimg.cc/GpyBsh3h/item4.png" alt="hat">
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                               </tr>
+                              </table>
+                           <![endif]-->  
+
+
+                           <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="250" valign="top" style="padding: 0;">
+                           <![endif]-->                            
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 250px; display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td class="item-description" style="padding: 20px 20px;">
+                                    <p style="margin:0; padding: 1px 0px; font-weight: 700">NIKE Traveler</p>
+                                    <p style="margin:0; padding: 1px 0px; font-size: 12px; color: #F15D2A;">Navy / 10</p>
+                                    
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                               </tr>
+                              </table>
+                           <![endif]-->  
+
+ 
+                           <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="85" valign="top" style="padding: 0;">
+                           <![endif]-->                             
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 85px; display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td style="text-align: center; padding: 20px 20px;">
+                                    <p style="margin:0;">x 1</p>
+                                 </td>
+                              </tr>
+                           </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                               </tr>
+                              </table>
+                           <![endif]-->  
+
+                           <!--[if (gte mso 9)|(IE)]>
+                              <table width="100%" style="border-spacing: 0;" role="presentation">
+                              <tr>
+                              <td width="45" valign="top" style="padding: 0;">
+                           <![endif]-->                             
+                           <table class="column" style="border-spacing: 0; vertical-align: top; width: 100%; max-width: 45px; display:inline-block;" role="presentation" align="center">
+                              <tr>
+                                 <td style="text-align: center; padding: 20px 20px; "  class="price" >
+                                    <p style="margin:0;">$200.00</p>
+                                 </td>
+                              </tr>
+                           </table>
+
+                            <!--[if (gte mso 9)|(IE)]>
+                                 </td>
+                               </tr>
+                              </table>
+                           <![endif]--> 
+
+                        </td>
+                     </tr>
+                  </table>               
+
+                   <!-- border -->
+                   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                     <tr>
+                        <td height="1.5" style="background-color: #EEEEEE;"></td>
+                     </tr>
+                  </table>
+
+               </td>
+            </tr>
+<!-- END OF ITEMS ORDERED -->
+
+<!-- START OF  TOTAL -->
+            <!-- subtotal -->
+            <tr>
+               <td style="padding: 0px 40px;" class="subtotal">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 250px;" align="left">
+                     <tr>
+                        <td align="left">
+                           <p>Subtotal</p>
+                        </td>
+                     </tr>
+                  </table>
+      
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 250px;" align="right">
+                     <tr>
+                        <td align="right">
+                           <p>$295.00</p>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+
+            <!-- Shipping -->
+            <tr>
+               <td style="padding: 0px 40px;" class="ship-row">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 250px;" align="left">
+                     <tr>
+                        <td align="left">
+                           <p style="margin:0;">Economy Shipping</p>
+                        </td>
+                     </tr>
+                  </table>
+      
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 250px;" align="right">
+                     <tr>
+                        <td align="right">
+                           <p style="margin:0;">$0.00</p>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+
+            <!-- Total -->
+            <tr>
+               <td style="padding: 15px 40px;" class="total-row">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 250px;" align="left">
+                     <tr>
+                        <td align="left">
+                           <p style="margin:0;">Total</p>
+                        </td>
+                     </tr>
+                  </table>
+      
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 250px;" align="right">
+                     <tr>
+                        <td align="right">
+                           <p style="margin:0;">$295.00</p>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+
+
+                 
+<!-- END OF TOTAL -->
+
+<!-- START OF SHIPPING INFO  BILL -->
+            <!-- payment info -->
+            <tr>
+               <td style="padding: 20px 40px;">
+                  <table width="100%" style="border-spacing:0;" role="presentation">
+                     <tr>
+                        <td>
+                           <p>Payment Info</p>
+                        </td>
+                     </tr>
+
+                     <!-- border row -->
+                     <tr>
+                        <td>
+                           <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                 <td height="1.5" style="background-color: #EEEEEE;"></td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+
+                     <tr>
+                        <td style="padding: 10px 0px" class="payment-row">
+                           <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 250px;" align="left">
+                              <tr>
+                                 <td align="left">
+                                    <img src="https://i.postimg.cc/6pT4tfDZ/visa.png" alt="visa">
+                                    <p style="margin: 0; display: inline-block; padding-top: 5px;vertical-align: top;">Visa</p>
+                                    <p style="margin: 0; display: inline-block; padding-top: 5px;vertical-align: top; font-size: 13px; color:#F15D2A;">(***********6500)</p>
+                                 </td>
+                              </tr>
+                           </table>
+               
+                           <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 250px;" align="right">
+                              <tr>
+                                 <td align="right">
+                                    <p style="margin:0;">$295.00</p>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+
+            <!-- Shipping address -->
+            <tr>
+               <td style="padding: 10px 40px;" class="shipping-info">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 250px;" align="left">
+                     <tr>
+                        <td align="left" style=" padding-top: 10px; line-height: 1.5;">
+                           <p style="margin:0;">Shipping Address</p>
+                           <p style="margin:0">Victor Silverio</p>
+                           <p style="margin:0">600 Montgomery St</p>
+                           <p style="margin:0">San Francisco, CA 941111</p>
+                           <p style="margin:0">United States</p>
+                           <p style="margin:0">Tel. +1 (650) 655-6500</p>
+                        </td>
+                     </tr>
+                  </table>
+      
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 250px;" align="right">
+                     <tr>
+                        <td align="right" style="padding-top: 10px; line-height: 1.5;">
+                           <p style="margin:0;">Customer</p>
+                           <p style="margin:0">Victor Silverio</p>
+                           <p style="margin:0">600 Montgomery St</p>
+                           <p style="margin:0">San Francisco, CA 941111</p>
+                           <p style="margin:0">United States</p>
+                           <p style="margin:0">Tel. +1 (650) 655-6500</p>
+                           <p style="margin:0">Victor@example.com</p>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            
+            <!-- border -->
+            <tr>
+               <td style="padding: 30px 0px;">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                     <tr>
+                        <td height="1.5" style="background-color: #EEEEEE;"></td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>            
+<!-- END OF SHIPPING INFO BILL -->
+
+<!-- START OF ORDER STATUS -->
+            <tr>
+               <td style="padding:20px 0px;">
+                  <table width="100%" style="border-spacing:0;" role="presentation">
+                     <tr>
+                        <td style="text-align: center">
+                           <p style="padding-bottom: 10px;">You can follow the status of your order by clicking the button below:</p>
+
+                           <a href="https://example.com" target="_blank" style="font-size: 15px; font-weight:300; text-decoration:none;color:#FFFFFF;background-color:#000000;border: 1px #eff8fe;border-radius: 0px; padding: 15px 40px; display: inline-block;">VIEW ORDER STATUS</a>
+
+                           <p style="color: #F15D2A; font-size: 12px;">If you have any questions, please contact us at</p>
+                           <p style="color: #F15D2A; font-size: 12px;">support@roasksrevival.com or (855) 553-5933</p>
+
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+
+            <!-- border -->
+            <tr>
+               <td style="padding: 30px 0px;">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                     <tr>
+                        <td height="1.5" style="background-color: #EEEEEE;"></td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>              
+<!-- END OF ORDER STATUS -->
+
+
+<!-- START OF FOOTER -->
+            <tr>
+               <td class="footer-row" style="padding-top: 50px; padding-bottom: 40px;">
+                  <table width="100%" style="border-spacing:0;" role="presentation">
+                     <tr>
+                        <td style="text-align: center;">
+                           <p>Copyright &copy 2022 Roark, All Rights Reserved.</p>
+                           <p>Roark 3961 Laguna Canyon Road</p>
+                           <p>Laguna Beach, CA 92651</p>
+                           <img style="padding-top: 10px;" src="https://i.postimg.cc/dt5ZbxSv/logo-footer.png" alt="logo">
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+<!-- END OF FOOTER -->
+
+         </table>
+
+         <!--[if (gte mso 9)|(IE)]>
+         </td>
+         </tr>
+         </table>
+         <![endif]-->
+      
+      </div>
+   </center>
+
+</body>
+</html>
